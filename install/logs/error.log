@@ -1,0 +1,8 @@
+2023/07/27 03:41:35 [emerg] 26961#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2023/07/27 03:41:35 [emerg] 26961#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2023/07/27 03:41:35 [emerg] 26961#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2023/07/27 03:41:35 [emerg] 26961#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2023/07/27 03:41:35 [emerg] 26961#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2023/07/27 03:41:35 [emerg] 26961#0: still could not bind()
+2023/07/27 03:42:19 [notice] 27103#0: signal process started
+2023/07/27 03:42:25 [emerg] 27128#0: directive "daemon" is not terminated by ";" in /root/nginx/conf/nginx.conf:13
