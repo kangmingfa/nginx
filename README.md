@@ -12,7 +12,6 @@ vim auto/cc/conf
 
 modify line ngx_compile_opt="-c -g"
 
-
 mkdir install
 
 ./auto/configure --prefix=install
@@ -27,9 +26,7 @@ make install
 
 vim conf/nginx.conf
 
-modify line
-
-user  root;
+modify line  user  root;
 
 cd install
 
