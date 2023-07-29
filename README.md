@@ -31,3 +31,25 @@ modify line  user  root;
 cd install
 
 ./sbin/nginx -c ../conf/nginx.conf
+
+## keepalive test
+
+```
+from flask import Flask, Response
+from werkzeug.serving import WSGIRequestHandler
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return Response("Hello, World!", 200, {'Connection': 'keep-alive'})
+
+if __name__ == '__main__':
+    WSGIRequestHandler.protocol_version = "HTTP/1.1"
+    app.run(host='0.0.0.0', port=8888)
+```
+### modify flask source code to support keepalive function
+
+`vim /usr/local/lib/python3.9/site-packages/werkzeug/serving.py`
+
+modify line : self.send_header("Connection", "Keep-Alive")
