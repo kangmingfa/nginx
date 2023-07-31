@@ -14,7 +14,8 @@ modify line ngx_compile_opt="-c -g"
 
 mkdir install
 
-./auto/configure --prefix=/root/nginx/install
+#开启-g选项 并且去掉Gcc优化
+./auto/configure --with-debug --with-cc-opt='-g -O0' --prefix=/root/nginx/install
 
 make
 
